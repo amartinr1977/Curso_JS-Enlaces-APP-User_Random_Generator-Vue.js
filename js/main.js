@@ -6,7 +6,13 @@ const miapp = new Vue({
     url: "https://randomuser.me/api/?results=50&nat=es",
     listado: []
   },
-  computed: {},
+  computed: {
+    listadoFiltrado() {
+      return this.listado.filter(usuario =>
+        usuario.nombre.includes(this.busqueda)
+      );
+    }
+  },
   methods: {},
   mounted() {
     console.log("Vue Montado ...");

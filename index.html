@@ -38,10 +38,10 @@
       <div class="row justify-content-center">
         <div
           class="my-4 mx-4"
-          v-for="(usuario,index) in listado"
+          v-for="(usuario,index) in listadoFiltrado"
           v-bind:key="index"
         >
-          <figure class="figure">
+          <figure class="figure text-center">
             <img
               v-bind:src="usuario.foto"
               class="figure-img img-fluid rounded-circle"
