@@ -1,0 +1,19 @@
+.miamarillo {
+  color: gold;
+}
+
+.mired {
+  color: red;
+}
+
+.opacidad {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.noseleccionable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

@@ -1,0 +1,3 @@
+# APP Lista de la Compra mediante Vue.js
+
+Se trata de una app hecha en Vue.js ...

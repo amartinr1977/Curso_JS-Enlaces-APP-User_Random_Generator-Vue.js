@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>APP Lista Compra</title>
+    <link rel="stylesheet" href="css/mi.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container miestilo" id="contenedor">
+      <div class="row cabecera justify-content-center mt-5" id="cabecera">
+        <h1 id="titulo1">
+          <i class="material-icons" style="font-size: 1em">shopping_cart</i>
+          {{ titulo }}
+        </h1>
+      </div>
+      <form id="formulario">
+        <div class="row container form-group justify-content-center">
+          <div class="col-8">
+            <input
+              type="text"
+              v-model="busqueda"
+              class="form-control"
+              placeholder="Indica el Nombre de Usuario a Buscar"
+            />
+          </div>
+        </div>
+      </form>
+
+      <pre>{{ $data }}</pre>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
