@@ -1,24 +1,6 @@
 Vue.component("comp-usuario", {
   props: ["user"],
-  /*html*/
-  template: `
-  <div 
-    v-bind:class="['p-2', 'my-4' ,'mx-4', 'manita', user.seleccionado ? 'seleccionado' : '' ]" 
-    v-on:click="Seleccionar">
-    <figure class="figure text-center">
-      <img
-        v-bind:src="user.foto"
-        class="figure-img img-fluid rounded-circle"
-        v-bind:alt="nombreMayusculas"
-      />
-      <figcaption class="figure-caption">
-        <b>{{ nombreMayusculas }}</b>
-        <br />
-        <span class="badge badge-success">{{ user.email }}</span>
-      </figcaption>
-    </figure>
-  </div>
-  `,
+  template: "#t-usuario",
   methods: {
     Seleccionar() {
       this.$emit("eseleccionado");
@@ -43,7 +25,7 @@ const miapp = new Vue({
     listado: []
   },
   updated() {
-    console.log("La lista de seleccionados es: " + this.listadoSeleccionados);
+    console.log("La lista de seleccionados es: " + this.nSeleccionados);
   },
   computed: {
     listadoFiltrado() {

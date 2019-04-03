@@ -63,6 +63,26 @@
       <pre>{{ $data }}</pre>
     </div>
 
+    <template id="t-usuario">
+      <div
+        :class="['p-2', 'my-4' ,'mx-4', 'manita', user.seleccionado ? 'seleccionado' : '' ]"
+        @click="Seleccionar"
+      >
+        <figure class="figure text-center">
+          <img
+            v-bind:src="user.foto"
+            class="figure-img img-fluid rounded-circle"
+            v-bind:alt="nombreMayusculas"
+          />
+          <figcaption class="figure-caption">
+            <b>{{ nombreMayusculas }}</b>
+            <br />
+            <span class="badge badge-success">{{ user.email }}</span>
+          </figcaption>
+        </figure>
+      </div>
+    </template>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/main.js"></script>
