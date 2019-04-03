@@ -43,6 +43,23 @@
           v-bind:user="usuario"
         ></comp-usuario>
       </div>
+      <hr />
+      <div class="row">
+        <div class="col-2">
+          <span class="badge badge-success" style="font-size: 3em">
+            {{ nSeleccionados }}
+          </span>
+        </div>
+        <div class="col-10">
+          <div class="row">
+            <comp-usuario
+              v-bind:user="usuario"
+              v-for="(usuario,index) in listadoSeleccionados"
+              v-bind:key="index"
+            ></comp-usuario>
+          </div>
+        </div>
+      </div>
       <pre>{{ $data }}</pre>
     </div>
 

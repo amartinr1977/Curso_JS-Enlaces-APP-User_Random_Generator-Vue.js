@@ -39,14 +39,23 @@ const miapp = new Vue({
   data: {
     titulo: "Random User Generator con Vue.js",
     busqueda: "",
-    url: "https://randomuser.me/api/?results=50&nat=es",
+    url: "https://randomuser.me/api/?results=20&nat=es",
     listado: []
+  },
+  updated() {
+    console.log("La lista de seleccionados es: " + this.listadoSeleccionados);
   },
   computed: {
     listadoFiltrado() {
       return this.listado.filter(usuario =>
         usuario.nombre.includes(this.busqueda)
       );
+    },
+    listadoSeleccionados() {
+      return this.listado.filter(usuario => usuario.seleccionado);
+    },
+    nSeleccionados() {
+      return this.listadoSeleccionados.length;
     }
   },
   methods: {
