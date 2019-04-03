@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>APP Lista Compra</title>
+    <title>APP User Generator Vue.js</title>
     <link rel="stylesheet" href="css/mi.css" />
     <link
       rel="stylesheet"
@@ -36,24 +36,12 @@
         </div>
       </form>
       <div class="row justify-content-center">
-        <div
-          class="my-4 mx-4"
+        <comp-usuario
+          v-on:eseleccionado="SeleccionarUsuario(usuario)"
           v-for="(usuario,index) in listadoFiltrado"
           v-bind:key="index"
-        >
-          <figure class="figure text-center">
-            <img
-              v-bind:src="usuario.foto"
-              class="figure-img img-fluid rounded-circle"
-              v-bind:alt="usuario.nombre"
-            />
-            <figcaption class="figure-caption">
-              <b>{{ usuario.nombre }}</b>
-              <br />
-              <span class="badge badge-success">{{ usuario.email }}</span>
-            </figcaption>
-          </figure>
-        </div>
+          v-bind:user="usuario"
+        ></comp-usuario>
       </div>
       <pre>{{ $data }}</pre>
     </div>

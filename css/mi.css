@@ -1,3 +1,13 @@
+.manita {
+  cursor: pointer;
+}
+
+.seleccionado {
+  background-color: bisque;
+  border-color: aquamarine;
+  border-width: 1px;
+}
+
 .miamarillo {
   color: gold;
 }
